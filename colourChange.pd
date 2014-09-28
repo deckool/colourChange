@@ -1,0 +1,24 @@
+#N canvas 660 203 681 436 10;
+#X obj 62 29 inlet;
+#X obj 151 31 inlet;
+#X obj 254 30 inlet;
+#X obj 36 107 unpack \$1 \$2 \$3;
+#X obj 161 145 unpack \$1 \$2 \$3;
+#X obj 158 113 trigger b l;
+#X obj 37 210 expr sqrt(($f1-$f4) + ($f2-$f5) + ($f3-$f6)*($f3-$f6))
+;
+#X obj 47 256 >;
+#X obj 57 298 outlet;
+#X connect 0 0 3 0;
+#X connect 1 0 5 0;
+#X connect 2 0 7 1;
+#X connect 3 0 6 0;
+#X connect 3 1 6 1;
+#X connect 3 2 6 2;
+#X connect 4 0 6 3;
+#X connect 4 1 6 4;
+#X connect 4 2 6 5;
+#X connect 5 0 6 0;
+#X connect 5 1 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
